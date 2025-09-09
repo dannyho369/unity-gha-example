@@ -84,7 +84,7 @@ jobs:
       # This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete.
       - name: Upload Unity_vX.X.X.alf file as Artifact
         id: upload_artifact
-        uses: actions/upload-artifact:@v4
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.unity_request_activation_file.outputs.filePath }}
           path: ${{ steps.unity_request_activation_file.outputs.filePath }}
@@ -139,7 +139,7 @@ jobs:
       # This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete.
       - name: Upload Unity Test Results as Artifact
         id: upload_artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Unity Test Results
           path: ${{ steps.unity_test_runner.outputs.artifactsPath }}
@@ -196,7 +196,7 @@ jobs:
       # This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete.
       - name: Upload Build as Artifact
         id: upload_artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Build-Android-${{ steps.unity_builder.outputs.buildVersion }}
           path: build
@@ -261,7 +261,7 @@ jobs:
       # This uploads artifacts from your workflow allowing you to share data between jobs and store data once a workflow is complete.
       - name: Upload Build as Artifact
         id: upload_artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Build-WebGL-${{ steps.unity_builder.outputs.buildVersion }}
           path: build
